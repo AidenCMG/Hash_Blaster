@@ -104,7 +104,9 @@ end for
 
 var char digest[16] := a0 append b0 append c0 append d0 // (Output is in little-endian)
 ```
-The uml diagram is shown in uml.svg
+The current UML diagram for the project:
+![diagram](uml.png)
+The md5 class implements the hash class. There will likely be a different class for each algorithm based on the hash class. hashlist holds the completed hashes and hashFunctions holds an instance or a pointer to an instance of each hashing object. The menu will list the various hash functions with a number next to each and the user will input the number of the hash they want. This will be used as an index for the array of hash objects and will call on the hash() method of that object. When the user quits all hashes will be saved to a file using the FileManager class.  
 
 ## Stretch Goals
 Users will also have the option to use a word list as an input.  
